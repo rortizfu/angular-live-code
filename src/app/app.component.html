@@ -1,0 +1,41 @@
+<h1>Clase Interacción componentes</h1>
+<app-child-component [title]="'Title from father'"
+                     (onClick)="childClicked($event)" ></app-child-component>
+
+{{ datos | json }}
+{{ datosClass | json }}
+{{ DATOS | json}}
+
+<h1>Clase entendiendo bindings y componente</h1>
+
+{{ obj.name?.oh }}
+
+{{ obj.name && oh.name.oh }}
+
+{{ date | date:'longDate' | uppercase  }}
+
+{{ obj | json }}
+
+<h1>{{ dontUseIt }}</h1>
+
+<p [style.background]="yellow">yellow</p>
+<p [style.font-size.em]="onComponentNumber">yellow</p>
+<button [attr.type]="'button'" [attr.aria-label]="'help'">texto</button>
+<div [class.special]="true">Special</div>
+<div [class.special]="false">Special</div>
+<div [ngClass]="{special: true, no: true}">ngClass</div>
+<div [ngClass]="{special: false, no: true}">ngClass</div>
+<div [ngClass]="changeClass()">ngClass</div>
+
+
+<button [disabled]="disable" (click)="onClick('hola component')">mi boton</button>
+<p [innerHtml]="'hola mundo!' + texto"></p>
+
+<h1> {{ label }} </h1>
+<h2 [innerHtml]="label">  </h2>
+<h3 innerHtml="{{ label }}">  </h3>
+
+<input [value]="hola" (keyup)="onChange($event)" />
+<input [(ngModel)]="hola" />
+
+<h1>{{ hola }}</h1>
