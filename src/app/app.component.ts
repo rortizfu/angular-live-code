@@ -29,6 +29,17 @@ export class AppComponent {
   }
   public datosClass = new DatosClass("name", 21);
   public DATOS = {...DATOS};
+  public collection = [
+    {
+      data: "1"
+    },
+    {
+      data: "2"
+    },
+    {
+      data: "3"
+    }
+  ];
 
   public onClick(label: string): void {
     this.label = label;
