@@ -1,4 +1,11 @@
-<app-countdown-parent-lv *ngIf="flag"></app-countdown-parent-lv>
+<h1>Angular Router</h1>
+<nav>
+    <a routerLink="/first" routerLinkActive="active">First</a>
+    <a [routerLink]="getPath(1)">Second</a>
+    <button (click)="navigate($event, 2)">Second Button</button>
+</nav>
+<router-outlet></router-outlet>
+<!-- <app-countdown-parent-lv *ngIf="flag"></app-countdown-parent-lv>
 <button (click)="flag = !flag">button</button>
 <h1> Iterando en componentes </h1>
 
@@ -53,4 +60,4 @@
 <input [value]="hola" (keyup)="onChange($event)" />
 <input [(ngModel)]="hola" />
 
-<h1>{{ hola }}</h1>
+<h1>{{ hola }}</h1> -->

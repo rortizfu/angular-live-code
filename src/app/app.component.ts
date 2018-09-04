@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Datos, DatosClass, DATOS } from './datos.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,7 @@ import { Datos, DatosClass, DATOS } from './datos.model';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  public path = '/second'
   public title = 'componentsInDepth';
   public disable = false;
   public texto = "desde el controlador";
@@ -41,6 +43,8 @@ export class AppComponent {
     }
   ];
 
+  constructor(public router: Router) {}
+
   public onClick(label: string): void {
     this.label = label;
   }
@@ -55,5 +59,14 @@ export class AppComponent {
 
   public childClicked(info: string) {
     console.log(info);
+  }
+
+  public getPath(value) {
+    return `${this.path}/${value}`;
+  }
+
+  public navigate(e, param) {
+    const url = this.getPath(param);
+    this.router.navigate([url]);
   }
 }

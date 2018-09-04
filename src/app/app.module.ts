@@ -9,17 +9,26 @@ import { ChildComponentComponent } from './child-component/child-component.compo
 import { CountdownTimerComponent } from './countdown-timer/countdown-timer.component';
 import { CountdownLocalVarParentComponent } from './countdown-local-var-parent/countdown-local-var-parent.component';
 import { AppService } from './app.service';
+import { FirtsComponent } from './firts/firts.component';
+import { SecondComponent } from './second/second.component';
+import { RouterModule } from '@angular/router';
+import { appRoutes } from './routings';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChildComponentComponent,
     CountdownTimerComponent,
-    CountdownLocalVarParentComponent
+    CountdownLocalVarParentComponent,
+    FirtsComponent,
+    SecondComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule.forRoot(
+      appRoutes
+    ),
     FormsModule,
     BrowserAnimationsModule
   ],
