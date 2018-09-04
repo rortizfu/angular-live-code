@@ -1,3 +1,5 @@
+<app-countdown-parent-lv *ngIf="flag"></app-countdown-parent-lv>
+<button (click)="flag = !flag">button</button>
 <h1> Iterando en componentes </h1>
 
 <div>
@@ -10,7 +12,6 @@
         {{ c.data }}, i: {{ i }}, f: {{f}}, l: {{l}}, o: {{o}}, e {{e}}
         <span *ngIf="f">primero</span>
     </p>
-    <p *ngFor="let x of Objects.keys(datos)"></p>
 </div>
 
 
