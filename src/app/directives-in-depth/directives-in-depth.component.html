@@ -1,0 +1,9 @@
+<p [appHighLight]="'red'" id="pr">
+  directives-in-depth works!
+</p>
+
+<div *ngIf="hero.name" class="name">{{hero.name}}</div>
+<p>*******</p>
+<ng-template [ngIf]="hero.name">
+  <div class="name">{{hero.name}}</div>
+</ng-template>

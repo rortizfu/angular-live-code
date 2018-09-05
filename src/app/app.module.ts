@@ -13,6 +13,8 @@ import { FirtsComponent } from './firts/firts.component';
 import { SecondComponent } from './second/second.component';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './routings';
+import { DirectivesInDepthComponent } from './directives-in-depth/directives-in-depth.component';
+import { HighLightDirective } from './directives/high-light.directive';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { appRoutes } from './routings';
     CountdownTimerComponent,
     CountdownLocalVarParentComponent,
     FirtsComponent,
-    SecondComponent
+    SecondComponent,
+    DirectivesInDepthComponent,
+    HighLightDirective
   ],
   imports: [
     BrowserModule,
